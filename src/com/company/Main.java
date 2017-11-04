@@ -11,15 +11,19 @@ public class Main {
             System.out.print("Это число не является натуральным.Введите натуральное число: ");
             N = in.nextInt();
         }
-        for (int i=10; i < N;i++) {
-           int remain=0;
-           int sum=0;
-            while(i!=0) {
-                remain=i%10;
-                sum+=Math.pow(remain,3);
-                i=(i-remain)/10;
-                }
-
+        for (int i = 1; i < N; i++) {
+            int sWhile = i;
+            int remain = 0;
+            int sum = 0;
+            while (sWhile != 0) {
+                remain = sWhile % 10;
+                sum += Math.pow(remain, 3);
+                sWhile = (sWhile - remain) / 10;
             }
+            if (sum == i) {
+                System.out.print(i + " ");
+            }
+
         }
     }
+}
